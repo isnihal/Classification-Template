@@ -27,3 +27,6 @@ xtrain,xtest,ytrain,ytest=train_test_split(x,y,train_size=0.8)
 from sklearn.linear_model import LogisticRegression
 classifier=LogisticRegression()
 classifier.fit(xtrain,ytrain)
+
+#Classifier Prediction
+ypred=classifier.predict(xtest)
