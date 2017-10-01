@@ -23,9 +23,9 @@ x=scaler.fit_transform(x)
 from sklearn.cross_validation import train_test_split
 xtrain,xtest,ytrain,ytest=train_test_split(x,y,train_size=0.75)
 
-#Logistic classification
-from sklearn.linear_model import LogisticRegression
-classifier=LogisticRegression()
+#!!!!!!!!!-----Edit Here-----!!!!!!!!!#
+#Classifier Section
+#Enter your classifier here
 classifier.fit(xtrain,ytrain)
 
 #Classifier Prediction
