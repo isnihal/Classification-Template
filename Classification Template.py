@@ -21,7 +21,7 @@ x=scaler.fit_transform(x)
 
 #Splitting sets
 from sklearn.cross_validation import train_test_split
-xtrain,xtest,ytrain,ytest=train_test_split(x,y,train_size=0.8)
+xtrain,xtest,ytrain,ytest=train_test_split(x,y,train_size=0.75)
 
 #Logistic classification
 from sklearn.linear_model import LogisticRegression
@@ -30,3 +30,7 @@ classifier.fit(xtrain,ytrain)
 
 #Classifier Prediction
 ypred=classifier.predict(xtest)
+
+#Confusion Matrix
+from sklearn.metrics import confusion_matrix
+cm=confusion_matrix(ytest,ypred)
