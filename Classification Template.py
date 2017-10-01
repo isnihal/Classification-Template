@@ -19,3 +19,11 @@ from sklearn.preprocessing import StandardScaler
 scaler=StandardScaler()
 x=scaler.fit_transform(x)
 
+#Splitting sets
+from sklearn.cross_validation import train_test_split
+xtrain,xtest,ytrain,ytest=train_test_split(x,y,train_size=0.8)
+
+#Logistic classification
+from sklearn.linear_model import LogisticRegression
+classifier=LogisticRegression()
+classifier.fit(xtrain,ytrain)
